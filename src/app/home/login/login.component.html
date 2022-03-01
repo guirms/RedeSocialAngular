@@ -1,11 +1,11 @@
 <h4 class="text-center">Login</h4>
 
-<form>
+<form (ngSubmit)="login()">
     <div>
-        <input class="form-control" placeholder="Nome do usuário"/>
+        <input class="form-control" placeholder="Nome do usuário" name="usuario" [(ngModel)]="usuario" />
     </div>
     <div class="caixaTexto">
-        <input class="form-control" type="password" placeholder="Senha do usuário"/>
+        <input class="form-control" type="password" placeholder="Senha do usuário" name="senha" [(ngModel)]="senha" />
     </div>
     <button type="submit" class="btm btn-primary btn-block caixaTexto">Entrar</button>
 </form>
