@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { stringify } from 'querystring';
 import { Observable } from 'rxjs';
 import { NovoUsuario } from './novo-usuario';
 
@@ -20,5 +19,6 @@ export class NovoUsuarioService {
   verificaUsuarioExistente(nomeUsuario : string) :Observable<any> {
       return this.httpClient.get(`http://localhost:3000/user/exists/${nomeUsuario}`);
   }
+  
 }
 
